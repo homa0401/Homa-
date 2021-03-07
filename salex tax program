@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(void)
+{
+        //giving the valuables
+        int collected;
+        float total, sales, county_t, state_t, total_t;
+        char month[10];
+      //initializing phaze 
+        total = 0;
+        sales = 0;
+        county_t = 0;
+        state_t = 0;
+        total_t = 0; 
+        
+       
+        //main loop to be executed
+        while ( collected != -1) {
+                printf("%s", "Enter total amount collected (-1 to quit): ");
+                scanf("%d", &collected);
+                printf("Enter name of month: ");
+                scanf("%s", month);
+
+        
+                sales = (float) (collected/100) * 91;
+                county_t = (float) (collected/100) * 5;
+                state_t = (float) (collected/100) * 4;
+                total_t = (float) (collected/100) * 9;
+                
+                
+                printf("Total collections: $ %d\n", collected);                
+                printf("Sales: $ %.2f\n", sales);               
+                printf("County Sales Tax: $ %.2f\n", county_t);                
+                printf("State Sales Tax: $ %.2f\n", state_t);
+                printf("Total Sales Tax: $ %.2f\n", total_t);
+        }
+        return 0;
+
+}
